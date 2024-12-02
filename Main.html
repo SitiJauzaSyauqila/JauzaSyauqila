@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh's World</title>
+</head>
+<body style="font-family: Times New Roman; background-color: #e0f7fa; color: #004d40; overflow-x: hidden; margin: 0; padding: 0;">
+
+    <audio autoplay loop>
+        <source src="AT song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <nav style="background-color: #004d40; position: sticky; top: 0; padding: 20px; z-index: 1000; text-align: center;">
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 15px; font-size: 18px; font-weight: bold;">
+                <a href="index.html" style="color: #fff; text-decoration: none; padding: 10px; transition: all 0.3s ease;">About Josh</a>
+            </li>
+            <li style="padding: 15px; font-size: 18px; font-weight: bold;">
+                <a href="Josh's Gallery.html" style="color: #fff; text-decoration: none; padding: 10px; transition: all 0.3s ease;">Josh's Gallery</a>
+            </li>
+            <li style="padding: 15px; font-size: 18px; font-weight: bold;">
+                <a href="edu.html" style="color: #fff; text-decoration: none; padding: 10px; transition: all 0.3s ease;">Josh's Education</a>
+            </li>
+            <li style="padding: 15px; font-size: 18px; font-weight: bold;">
+                <a href="Intern.html" style="color: #fff; text-decoration: none; padding: 10px; transition: all 0.3s ease;">Internships Experiences</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero" style="height: 100vh; background-image: url('capy.jfif'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;">
+        <h1 style="color: #004d40; font-size: 3.5em; margin-bottom: 20px;">Welcome to Josh's World</h1>
+        <p style="color: #004d40; font-size: 1.3em; max-width: 600px; margin-bottom: 30px; line-height: 1.5;">Your journey starts here. Explore, learn, and create amazing experiences.</p>
+        <a href="me.html" class="btn" style="background-color: #004d40; color: white; padding: 15px 30px; text-transform: uppercase; text-decoration: none; font-size: 16px; border-radius: 5px; transition: transform 0.3s ease, background-color 0.3s ease;">Get to Know Me</a>
+        <section class="date-time-container" style="background-color: #fff; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px 30px; text-align: center; width: 300px; margin: 20px auto;">
+            <h1 style="font-size: 24px; color: #2c3e50; margin-bottom: 10px;">Current Date & Time</h1>
+            <div class="date" id="date" style="font-size: 18px; margin: 5px 0; color: #34495e;">Loading...</div>
+            <div class="divider" style="border-top: 1px solid #ddd; margin: 15px 0;"></div>
+            <div class="time" id="time" style="font-size: 18px; margin: 5px 0; color: #34495e;">Loading...</div>
+        </section>
+    </section>
+
+    <section class="section" id="about" style="padding: 50px 0; text-align: center;">
+        <p style="font-size: 1.2em; line-height: 1.5; color: #555; max-width: 800px; margin: 0 auto 30px;">Josh is a dynamic individual passionate about technology, education, and creating fun experiences. With a diverse background in various fields, Josh is always seeking new opportunities to connect, learn, and grow. Whether it's exploring the latest trends or creating educational content, Josh is ready for the next adventure.</p>
+    </section>
+
+    <footer id="contact" style="background-color: #004d40; color: white; text-align: center; padding: 30px;">
+        <p>&copy; 2024 Josh's World. All rights reserved to JzaSyqla.</p>
+        <p>
+            <a href="contact.html" style="color: #ffd700; text-decoration: none; margin: 0 10px;">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const date = now.toLocaleDateString('en-US', options);
+            const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            document.getElementById('date').textContent = date;
+            document.getElementById('time').textContent = time;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
+
+

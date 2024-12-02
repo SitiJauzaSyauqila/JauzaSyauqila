@@ -1,0 +1,287 @@
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <body bgcolor="#d0ece7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh's Education Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Times New Roman;
+            background-image: url('B8.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 1s;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0b5345;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #73c6b6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 3em;
+            padding: 20px;
+            background-color: rgba(115, 198, 182, 0.9);
+            margin: 80px 0;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 2.5em;
+            padding: 10px;
+            margin-top: 40px;
+            background-color: #0b5345;
+            border-radius: 10px;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 70%;
+            animation: slideIn 1.5s ease-out;
+            position: relative;
+        }
+
+        .section img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+            margin: 20px;
+        }
+
+        .section img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1.2em;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .parallax {
+            background-image: url('B8.gif');
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .carousel-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 70%;
+            border-radius: 15px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel:hover img {
+            transform: scale(1.1);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ddd;
+            margin-top: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #1abc9c;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            border-radius: 10px;
+            animation: progressBar 4s ease-in-out;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 100;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            animation: confettiAnimation 3s infinite;
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes progressBar {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes confettiAnimation {
+            0% { 
+                transform: translateY(0) scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(100px) scale(1.5);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(200px) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Make the page responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .section {
+                padding: 30px;
+            }
+
+            .carousel img {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        // Confetti effect on page load
+        window.onload = function() {
+            let confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            document.body.appendChild(confetti);
+        };
+    </script>
+</head>
+
+<body>
+
+    <div><h1>✨🌕☆ Josh's Education Journey ☆🌕✨</h1></div>
+
+    <div class="navbar">
+        <a href="#kindergarten" class="active">Kindergarten</a>
+        <a href="#primary">Primary School</a>
+        <a href="#highschool">High School</a>
+        <a href="#university">University</a>
+    </div>
+
+    <div id="kindergarten" class="section">
+        <h2>Kindergarten</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Tadika.png" alt="Kindergarten Image 1">
+            </div>
+        </div>
+        <p><i><b>I started school at the age of 5 and that time was in 2009. I went to Tadika Do Re Mi which is located in Kluang, Johor and it is close to my home. This kindergarten is a private kindergarten and it uses Chinese as the main language in learning. In the beginning, it must have been difficult for me to learn at first but over time I was able to catch up and understand what I was learning. With the help of my teachers I was able to enjoy my study time at Kindergarten with joy and satisfaction. There I was able to make a lot of friends and I also got to know the world a little more widely.</b></i></p>
+    </div>
+
+    <div id="primary" class="section">
+        <h2>Primary School</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="SJKC.png" alt="Primary School Image 1">
+            </div>
+        </div>
+        <p><i><b>The next year arrived after two years of studying in Kindergarten, which is 2011. I started entering the primary school phase. I studied in primary school for 6 years. I go to SJK(C) Chiau Min. This school is also located in Kluang, Johor. Furthermore, as you can see the letter "C" in the name of the school, I must have attended a Chinese school. All subjects except English, Malay and Islam do not use Chinese as the main language of learning. (Obvi) At school it was very fun because I was able to make friends with many people and also get an experience that not everyone gets which is like learning another language other than English and Malay. There I also learned to be a disciplined person, a responsible person and much more. There were also many activities at the school and all of them I participated in were very enjoyable and are still vivid in my memory even though I was very young at the time.</b></i></p>
+    </div>
+
+    <div id="highschool" class="section">
+        <h2>High School</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="SMK.png" alt="High School Image 1">
+            </div>
+        </div>
+        <p><i><b>Time flies again, now it's 2017 and I'm 13 years old. 5 years I studied in high school. This time was more challenging for me because I had to go to a regular national school. That is SMK Taman Kluang Barat in Kluang, Johor. Why do I say challenging? It's because after I got used to the way of learning in a Chinese-type school for 8 years, now I have to get used to the way of a normal national school, which is a school that uses Malay as the first language in learning. It's not that I don't understand Malay, it's just that I'm used to Chinese when I'm studying. During my first year studying at the school, it was very difficult for me to catch up with the new way of learning for me. It's because I'm like a fool who never learns about the basics of learning. For example for Mathematics. When the teacher told me to answer random ciphers, I would freeze because I had to translate in my brain from Chinese to Malay quickly. Sometimes I could answer but when I couldn't answer the teacher would scold me and also accuse me that I didn't memorize the code even though I was 13 years old. It makes me disappointed in myself. Again, when the science subject formula. It's not that I don't know, it's just that the formula is different in Malay and Chinese. In the first year I was in the first class, but due to the challenges I faced, in the next year I was demoted because my reputation fell. Two years I was placed in the second class, that is in the year 2018-2019. In 2020 I have started to catch up again to get a good reputation and get into the first class until I finish studying and pass with distinction in the Malaysian Certificate of Examination (SPM). Today I also got a lot of valuable memories for myself and I will remember them anytime. </b></i></p>
+    </div>
+
+    <div id="university" class="section">
+        <h2>University</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="UITM.jpg" alt="University Image 1">
+            </div>
+        </div>
+        <p><i><b>In 2021, I have received an offer to continue my studies to a higher level at UiTM Johor Branch, Segamat Campus. I am very happy because I got an offer to UiTM. I have been given a field in information management as my course to continue studying. Although I am not interested in this course but I still continue because I do not want to wait for the appeal application phase. At the same time I try to accept even though it is difficult. This is because the field I am applying for is very far from what is given which is art. But I have gone through it and I can feel that this course is not as bad as I expected. I still enjoy this course. I was able to meet a new friend who was very fun and never stopped laughing. They are not too serious in friendship. The support they gave was beyond my expectations.</b></i></p>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress">Progress</div>
+    </div>
+</body>
+</html>

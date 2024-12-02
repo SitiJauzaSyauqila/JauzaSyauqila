@@ -1,0 +1,145 @@
+<html>
+<head>
+<body bgcolor="#d0ece7">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Background Image</title>
+    <style>
+        body {
+            background-image: url('capy.jfif'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the whole screen */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-position: center; /* Center the image */
+        }
+    </style>
+
+<style>
+        .button {
+            background-color:#0b5345 ; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 10px 20px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the link behave like a button */
+            font-size: 16px; /* Increase font size */
+            margin: 4px 2px; /* Add some margin */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .button:hover {
+            background-color: #C1E7E3; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <center><h1 style="background-color:#73c6b6 ;">⋆˚✿˖°JOSH'S WORLD⋆˚✿˖°</h1></center>
+    
+    <marquee scrollamount="15"><h2><p style="color:#004d40;">⋆˚✿˖°WELCOME TO JOSH'S WORLD⋆˚✿˖°</h2></marquee>
+
+    <center><img src="Adventure Time Intro.gif" alt="Adventure Time" style="width:350px;height:200px;"></center>
+    
+    <marquee scrollamount="15"><center><h2><i><p style="color:#004d40;">If you want to know about Josh, please click the button below it will bring you to Josh</p></i></h2></center></marquee>
+
+    <center><a href="index.html"class="button" target="_blank">About Josh</a></center>
+
+    <center><a href="Josh's Gallery.html"class="button" target="_blank">Josh's Gallery</a><br></center>
+
+    <center><a href="education.html"class="button" target="_blank">Internships Experiences</a><br></center>
+
+<center>
+<p>
+<audio controls>
+  <source src="AT song.ogg" type="audio/ogg">
+  <source src="AT song.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+
+</audio>
+</p>
+</center>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time and Date Display</title>
+  <style>
+    body {
+      font-family: Times New Roman;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .time-date {
+      font-size: 24px;
+      background-color: #73c6b6;
+      color: white;
+      padding: 5px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="time-date" id="timeDate"></div>
+
+  <script>
+    function updateTimeAndDate() {
+      const now = new Date();
+      const timeDate = document.getElementById("timeDate");
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+      const date = now.toLocaleDateString('en-US', options);
+      const time = now.toLocaleTimeString('en-US');
+
+      timeDate.innerHTML = `${date} - ${time}`;
+    }
+
+    // Update time and date every second
+    setInterval(updateTimeAndDate, 1000);
+    updateTimeAndDate();
+  </script>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Times New Roman;
+    }
+    footer {
+      background-color: #73c6b6;
+      color: white;
+      text-align: center;
+      padding: 0px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <footer>
+    <p>&copy; 2024 YourWebsite. All rights reserved.</p>
+    <p>
+      <a href="#about" target="_blank">About</a> |
+      <a href="contact.html" target="_blank">Contact</a> |
+      <a href="#privacy" target="_blank">Privacy Policy</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+</body>
+</html>

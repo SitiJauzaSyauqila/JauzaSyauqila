@@ -1,0 +1,208 @@
+<html>
+<head>
+
+  <style>
+    body {
+      background-color: #d0ece7;
+      font-family: Times New Roman;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      color: #0e6655;
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #f0f8ff;
+      color: #000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      animation: slideIn 2s ease-in-out;
+    }
+
+    th, td {
+      border: 3px solid #ddd;
+      text-align: center;
+      padding: 12px;
+      font-size: 16px;
+      transition: transform 0.3s;
+    }
+
+    th {
+      background-color: #0e6655;
+      color: #a2d9ce;
+    }
+
+    tr {
+      background-color: #a2d9ce;
+      color: #0e6655;
+    }
+
+    tr:hover {
+      background-color: #16a085;
+      color: white;
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    audio {
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    audio:hover {
+      background-color: #16a085;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
+    }
+
+    a:hover img {
+      animation: glowing 1.5s infinite alternate;
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 10px #fff;
+      }
+      100% {
+        box-shadow: 0 0 20px #00ff00;
+      }
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background-color: #d0ece7; }
+      50% { background-color: #a2d9ce; }
+      100% { background-color: #d0ece7; }
+    }
+
+    body {
+      animation: backgroundAnimation 5s infinite;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🎧🎸★ My Fav Song All The Time ★🎸🎧</h2>
+
+<table>
+  <tr>
+    <th>Title Song</th>
+    <th>Song</th>
+    <th>Spotify Code</th>
+  </tr>
+
+  <tr>
+    <td><h3>Sparkling Night by Pentagon</h3></td>
+    <td>
+      <audio controls>
+        <source src="Pentagon.ogg" type="audio/ogg">
+        <source src="Pentagon.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </td>
+    <td>
+      <a href="https://open.spotify.com/track/5muXLxcyjv5RY2sGwl68TL?si=af00d7f38b3c4047" target="_blank">
+        <img src="s1.jpeg" alt="Sparkling Night">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td><h3>Blue by Yung Kai</h3></td>
+    <td>
+      <audio controls>
+        <source src="Blue.ogg" type="audio/ogg">
+        <source src="Blue.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </td>
+    <td>
+      <a href="https://open.spotify.com/track/3be9ACTxtcL6Zm4vJRUiPG?si=b3835cfea11046f4" target="_blank">
+        <img src="s2.jpeg" alt="Blue">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td><h3>Sempurna by Insomniacks</h3></td>
+    <td>
+      <audio controls>
+        <source src="Sempurna.ogg" type="audio/ogg">
+        <source src="Sempurna.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </td>
+    <td>
+      <a href="https://open.spotify.com/track/67C6LHREqmytK923Ak6R0I?si=3ecc39adec3a41eb" target="_blank">
+        <img src="s3.jpeg" alt="Sempurna">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td><h3>All I Ask by Adelle</h3></td>
+    <td>
+      <audio controls>
+        <source src="Adelle.ogg" type="audio/ogg">
+        <source src="Adelle.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </td>
+    <td>
+      <a href="https://open.spotify.com/track/6DEMMeWXfmFAXgDUMMzeg6?si=03079cbaac5747d7" target="_blank">
+        <img src="s4.jpeg" alt="All I Ask">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td><h3>Don't Watch Me Cry cover by Alenxandra Porat</h3></td>
+    <td>
+      <audio controls>
+        <source src="Cry.ogg" type="audio/ogg">
+        <source src="Cry.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </td>
+    <td>
+      <a href="https://open.spotify.com/track/6dmKaXbClYeJ9KobFzjc5y?si=21b68334ee72429d" target="_blank">
+        <img src="s5.jpeg" alt="Don't Watch Me Cry">
+      </a>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

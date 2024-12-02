@@ -1,0 +1,149 @@
+<html>
+<head>
+
+<body bgcolor="#d0ece7">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <style>
+        body {
+            background-image: url('B8.gif');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+        }
+    </style>
+
+<html>
+<head>
+<body bgcolor="#d0ece7">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs</title>
+    <style>
+        body {
+            background-image: url('B8.gif'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the whole screen */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-position: center; /* Center the image */
+        }
+    </style>
+
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Times New Roman;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+    }
+
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 0;
+    }
+
+    .arrow.right {
+      right: 0;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <img src="T1.jpeg" alt="Image 1" class="slides">
+  <img src="T2.jpeg" alt="Image 2" class="slides">
+  <img src="T3.jpeg" alt="Image 1" class="slides">
+  <img src="T4.jpeg" alt="Image 1" class="slides">
+  <img src="T5.jpeg" alt="Image 2" class="slides">
+  <img src="T6.jpeg" alt="Image 3" class="slides">
+  <img src="T7.jpeg" alt="Image 1" class="slides">
+  <img src="T8.jpeg" alt="Image 2" class="slides">
+
+  <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function changeSlide(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slides");
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+  // Auto-slide functionality
+  setInterval(() => {
+    changeSlide(1); // Move to the next slide every 1 seconds
+  }, 1000); // Adjust the interval time in milliseconds (1000ms = 1s)
+</script>
+
+
+</body>
+</html>
