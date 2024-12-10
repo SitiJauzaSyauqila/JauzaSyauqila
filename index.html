@@ -111,13 +111,13 @@
 
   <script>
     function navigatePage(event) {
-      event.preventDefault(); // Prevent default form submission
+      event.preventDefault(); 
 
       const choice = document.querySelector('input[name="choice"]:checked').value;
       if (choice === "yes") {
-        window.location.href = "mainpage.html"; // Redirect to 'Yes' page
+        window.location.href = "mainpage.html"; 
       } else {
-        window.location.href = "Error.html"; // Redirect to 'No' page
+        window.location.href = "Error.html"; 
       }
     }
   </script>
@@ -185,7 +185,6 @@
       timeDate.innerHTML = `${date} - ${time}`;
     }
 
-    // Update time and date every second
     setInterval(updateTimeAndDate, 1000);
     updateTimeAndDate();
   </script>
